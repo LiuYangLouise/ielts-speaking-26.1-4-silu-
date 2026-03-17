@@ -1,0 +1,969 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>新生留学 · 雅思口语2026 · Part 1题库全解析</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #f0f5fc;
+            font-family: 'Inter', 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+            padding: 30px 20px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .master-container {
+            max-width: 1400px;
+            width: 100%;
+            background: white;
+            border-radius: 70px;
+            box-shadow: 0 40px 70px rgba(0, 30, 60, 0.2);
+            overflow: hidden;
+            padding: 30px 35px 45px;
+            position: relative;
+        }
+
+        .export-wrapper {
+            position: absolute;
+            top: 40px;
+            right: 45px;
+            z-index: 10;
+        }
+        .export-btn {
+            background: #1e3a5f;
+            color: white;
+            border: none;
+            padding: 12px 28px;
+            border-radius: 60px;
+            font-weight: 600;
+            font-size: 1rem;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            box-shadow: 0 8px 16px rgba(0,35,70,0.3);
+            transition: 0.2s;
+        }
+        .export-btn:hover {
+            background: #0f2a44;
+            transform: scale(1.02);
+        }
+
+        .header-area {
+            text-align: center;
+            margin-bottom: 20px;
+            margin-right: 140px;
+        }
+        .main-title {
+            font-size: 2.8rem;
+            font-weight: 700;
+            color: #0b2d4a;
+            letter-spacing: -0.02em;
+            line-height: 1.3;
+        }
+        .sub-title {
+            font-size: 1.6rem;
+            font-weight: 500;
+            color: #2a4f74;
+            line-height: 1.3;
+            margin-top: 2px;
+        }
+        .daily-motto {
+            font-size: 1.3rem;
+            font-weight: 500;
+            color: #3f5e7f;
+            background: #e7f0fa;
+            display: inline-block;
+            padding: 8px 40px;
+            border-radius: 60px;
+            margin-top: 15px;
+            border: 1px solid #bad2ed;
+            line-height: 1.3;
+        }
+
+        .mode-toggle {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            margin: 20px 0 25px;
+        }
+        .mode-btn {
+            background: #edf3fa;
+            border: 2px solid #c5d8f0;
+            border-radius: 100px;
+            padding: 16px 42px;
+            font-weight: 700;
+            font-size: 1.3rem;
+            color: #113456;
+            cursor: pointer;
+            transition: all 0.2s;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.03);
+        }
+        .mode-btn.active {
+            background: #1e3a5f;
+            color: white;
+            border-color: #1e3a5f;
+            box-shadow: 0 12px 24px #1e3a5f60;
+        }
+
+        .main-panel {
+            display: none;
+        }
+        .main-panel.active-panel {
+            display: block;
+        }
+
+        .topic-nav {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            justify-content: center;
+            margin: 30px 0 30px;
+        }
+        .topic-btn {
+            background: #edf3fa;
+            border: 2px solid #c5d8f0;
+            border-radius: 100px;
+            padding: 12px 22px;
+            font-weight: 600;
+            font-size: 1rem;
+            color: #113456;
+            cursor: pointer;
+            transition: all 0.2s;
+            flex: 0 1 auto;
+            white-space: nowrap;
+        }
+        .topic-btn.active {
+            background: #1e3a5f;
+            color: white;
+            border-color: #1e3a5f;
+            box-shadow: 0 10px 18px #1e3a5f70;
+        }
+
+        .topic-panel {
+            display: none;
+        }
+        .topic-panel.active-panel {
+            display: block;
+        }
+
+        .question-card {
+            background: #f9fdff;
+            border: 2px solid #dae5f3;
+            border-radius: 40px;
+            padding: 30px 32px;
+            margin-bottom: 30px;
+        }
+
+        .en-prompt {
+            background: #f2f9ff;
+            border: 2px solid #bed4ee;
+            border-radius: 36px;
+            padding: 22px 28px;
+            font-size: 1.2rem;
+            font-weight: 520;
+            color: #00305c;
+            line-height: 1.6;
+            margin-bottom: 25px;
+        }
+
+        .note-area {
+            margin-bottom: 20px;
+        }
+        .note-label {
+            font-weight: 700;
+            color: #103553;
+            margin-bottom: 12px;
+            font-size: 1.1rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .note-label span {
+            background: #103553;
+            color: white;
+            border-radius: 60px;
+            padding: 4px 20px;
+            font-size: 0.9rem;
+        }
+        .resize-note {
+            width: 100%;
+            border: 2px solid #c1d6f0;
+            border-radius: 24px;
+            padding: 18px 24px;
+            font-size: 1rem;
+            background: white;
+            resize: both;
+            min-height: 80px;
+            max-width: 100%;
+            font-family: inherit;
+        }
+
+        .insight-collapse {
+            background: #f8fcff;
+            border-radius: 32px;
+            border: 2px solid #d2e2f5;
+            overflow: hidden;
+            margin: 25px 0 20px;
+        }
+        .insight-header {
+            background: #e2eefa;
+            padding: 16px 26px;
+            font-weight: 700;
+            font-size: 1.2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+        }
+        .insight-header .arrow {
+            font-size: 2rem;
+            color: #1f4a76;
+            transition: transform 0.3s;
+        }
+        .insight-content {
+            max-height: 0;
+            padding: 0 26px;
+            background: white;
+            transition: max-height 0.5s ease, padding 0.3s;
+            overflow: hidden;
+            border-top: 0 solid #c0d2e8;
+        }
+        .insight-content.expanded {
+            max-height: 1000px;
+            padding: 18px 26px 25px;
+            border-top-width: 3px;
+        }
+        .insight-deco {
+            background: #eff6ff;
+            border-left: 8px solid #f3b33d;
+            border-radius: 24px;
+            padding: 18px 24px;
+            line-height: 1.7;
+        }
+
+        .sentence-toggle-area {
+            margin: 20px 0 0;
+        }
+        .btn-sentence {
+            background: white;
+            border: 2px solid #1f3f64;
+            color: #1f3f64;
+            padding: 12px 32px;
+            border-radius: 60px;
+            font-weight: 700;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: 0.15s;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .btn-sentence:hover {
+            background: #1f3f64;
+            color: white;
+        }
+        .hidden-practice {
+            display: none;
+            margin-top: 25px;
+            background: #f9f6ee;
+            border-radius: 32px;
+            padding: 25px;
+            border: 2px dashed #f3b33d;
+        }
+        .hidden-practice.show {
+            display: block;
+        }
+        .practice-item {
+            margin-bottom: 30px;
+        }
+        .practice-item:last-child {
+            margin-bottom: 0;
+        }
+        .chinese-hint {
+            background: #e1eaf3;
+            border-radius: 20px;
+            padding: 12px 18px;
+            margin-bottom: 15px;
+            font-size: 1rem;
+            color: #1a3d5e;
+            border-left: 5px solid #f3b33d;
+        }
+        .mini-example-btn {
+            background: white;
+            border: 2px solid #1f3f64;
+            color: #1f3f64;
+            padding: 6px 22px;
+            border-radius: 40px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            cursor: pointer;
+        }
+        .example-hidden {
+            background: #feedcf;
+            border-left: 8px solid #f3b33d;
+            padding: 14px 22px;
+            border-radius: 22px;
+            margin-top: 15px;
+            display: none;
+        }
+        .example-hidden.show {
+            display: block;
+        }
+        .example-en {
+            font-weight: 600;
+            color: #002d55;
+        }
+        .example-zh {
+            color: #2d4b6e;
+            margin-top: 5px;
+        }
+
+        .footer-note {
+            margin-top: 50px;
+            color: #3d6083;
+            text-align: center;
+            border-top: 2px dashed #c2d8f0;
+            padding-top: 25px;
+        }
+    </style>
+</head>
+<body>
+<div class="master-container">
+    <div class="export-wrapper">
+        <button class="export-btn" id="exportBtn">📄 导出当前话题 (Word)</button>
+    </div>
+
+    <div class="header-area">
+        <div class="main-title">新生留学雅思口语提优进阶</div>
+        <div class="sub-title">2026年雅思口语Part 1题库全解析</div>
+        <div class="daily-motto">天天进步，每日新生</div>
+        <div class="mode-toggle">
+            <button class="mode-btn active" id="modeEvergreen">📌 万年老题</button>
+            <button class="mode-btn" id="modeNew">✨ 1-4月新题</button>
+            <button class="mode-btn" id="modeRetained">📚 保留老题</button>
+        </div>
+    </div>
+
+    <!-- 三个主面板：万年老题 / 新题 / 保留老题 (只包含Part 1) -->
+    <div id="evergreenPanel" class="main-panel active-panel"></div>
+    <div id="newPanel" class="main-panel"></div>
+    <div id="retainedPanel" class="main-panel"></div>
+
+    <div class="footer-note">
+        ✦ 点击上方分类按钮切换题库 ✦ 每个话题下的每个问题都有独立思路和参考回答 ✦ 点击思路/参考回答展开
+    </div>
+</div>
+
+<script>
+    // 万年老题Part 1数据 (每个问题独立思路+答案，基于苏大机械大三男生，无锡人，住校，未来工程师)
+    const evergreenPart1 = [
+        { topic: "Work/Studies", questions: [
+            { q: "What subjects are you studying?", 
+              insight: "机械工程专业，核心课程包括力学、材料科学、热力学、机械设计等。可以具体提1-2门感兴趣的课。",
+              answer: "I'm majoring in Mechanical Engineering at Soochow University. My core subjects include Solid Mechanics, Thermodynamics, and Mechanical Design. I find the combination of theory and hands-on projects really engaging." },
+            { q: "Do you like your subject?", 
+              insight: "喜欢，因为机械是工业的基础，而且能参与机器人、汽车等实际项目。",
+              answer: "Yes, I'm really passionate about it. Mechanical engineering allows me to understand how machines work and even build things myself. Last semester, we designed a mini robotic arm, which was both challenging and rewarding." },
+            { q: "Why did you choose to study that subject?", 
+              insight: "从小喜欢拆装东西，后来受到工程师父亲的启发，想成为一名机械工程师。",
+              answer: "I've always been curious about how things work. My father is an engineer, and he encouraged me to pursue this field. I believe mechanical engineering is not only fascinating but also offers great career prospects." },
+            { q: "Do you think your subject is popular in your country?", 
+              insight: "在中国，机械工程一直很受欢迎，因为制造业是国民经济支柱。",
+              answer: "Definitely. China has a strong manufacturing sector, so mechanical engineering remains a popular choice among students. Many graduates find jobs in automotive, electronics, and heavy machinery industries." },
+            { q: "Do you have any plans for your studies in the next five years?", 
+              insight: "打算出国读研，专攻机器人或自动化方向，然后回国发展。",
+              answer: "Yes, I'm planning to pursue a master's degree abroad, probably in robotics or automation. After that, I'd like to come back to China and work in the advanced manufacturing sector." },
+            { q: "What technology do you use when you study?", 
+              insight: "常用笔记本电脑，还有SolidWorks、MATLAB等专业软件。",
+              answer: "I use my laptop a lot, especially for running simulations. Software like SolidWorks for 3D modeling and MATLAB for data analysis are essential tools in my daily study." },
+            { q: "What work do you do? (针对已工作版本)", 
+              insight: "此问题适用于已工作的学生，可跳过或用学生身份回答：目前还是全职学生，但做过实习。",
+              answer: "I'm still a full-time student, but I had an internship last summer at a local manufacturing company, where I assisted in quality control and process optimization." },
+            { q: "Do you like your job? (同上)", 
+              insight: "实习生角度：很喜欢，学到了课堂外的实用技能。",
+              answer: "I really enjoyed my internship. It gave me a taste of real engineering work and confirmed my passion for this field." },
+            { q: "What requirements did you need to meet to get your current job? (同上)", 
+              insight: "需要相关专业知识、实习经历和面试表现。",
+              answer: "To get the internship, I needed to have completed certain core courses and pass a technical interview. The company was looking for candidates with basic CAD skills and a willingness to learn." },
+            { q: "Do you have any plans for your work in the next five years?", 
+              insight: "希望读研后进入外企或研究所，做机器人相关研发。",
+              answer: "After my master's, I aim to work in R&D department of a robotics company or a research institute. I'm particularly interested in how robots can assist in manufacturing and daily life." }
+        ]},
+        { topic: "Hometown", questions: [
+            { q: "Where is your hometown?", 
+              insight: "无锡，位于江苏省，靠近太湖，离苏州很近。",
+              answer: "My hometown is Wuxi, a city in Jiangsu province, right next to Taihu Lake. It's only about 40 minutes away from Suzhou by train." },
+            { q: "Is that a big city or a small place?", 
+              insight: "无锡是中等偏大的城市，经济发达，人口约700万。",
+              answer: "I'd say it's a medium-to-large city. It's not as big as Shanghai, but it has a population of around 7 million and a thriving economy, especially in manufacturing and tourism." },
+            { q: "Please describe your hometown a little.",
+              insight: "无锡有太湖、灵山胜境，以水蜜桃和排骨闻名，是一座宜居城市。",
+              answer: "Wuxi is known for its beautiful Taihu Lake, the Lingshan Grand Buddha, and delicious food like sweet and spare ribs. It's a very livable city with a mix of modern development and traditional culture." },
+            { q: "How long have you been living there?",
+              insight: "我在无锡出生长大，直到18岁来苏州上大学。",
+              answer: "I was born and raised in Wuxi and lived there for 18 years before moving to Suzhou for university." },
+            { q: "Do you like your hometown?",
+              insight: "非常喜欢，那里有我的家人和童年回忆。",
+              answer: "Yes, I love my hometown. It's where my family still lives, and I have many fond memories of growing up there. Whenever I go back, it feels like home." },
+            { q: "What's your hometown famous for?",
+              insight: "无锡以太湖、水蜜桃、酱排骨和制造业闻名。",
+              answer: "Wuxi is famous for Taihu Lake, delicious peaches, and its sweet spare ribs. It's also an important industrial city, known for machinery and textile manufacturing." },
+            { q: "Is your hometown a good place for young people to pursue their careers?",
+              insight: "无锡有很多外资企业和制造业机会，但对机械专业来说，苏州可能更好。",
+              answer: "Wuxi has many opportunities, especially in manufacturing and technology. But for my field, mechanical engineering, Suzhou might be even better because it has more international companies and research centers." }
+        ]},
+        { topic: "Home/Accommodation", questions: [
+            { q: "What kind of house or apartment do you live in?",
+              insight: "目前住苏州大学宿舍，四人一间，有独立卫生间。",
+              answer: "Currently, I live in a dormitory on campus at Soochow University. I share a room with three other students, and we have a private bathroom." },
+            { q: "Do you prefer living in a house or an apartment?",
+              insight: "更喜欢公寓，因为更安全、方便，适合学生。",
+              answer: "I prefer apartments, especially for students. They are usually safer and more convenient, with facilities like study rooms and cafeterias nearby." },
+            { q: "Please describe the room you live in.",
+              insight: "宿舍约20平米，有四张床、四张书桌和一个衣柜。",
+              answer: "Our dorm room is about 20 square meters. It has four bunk beds with desks underneath, so each of us has our own study space. There's also a shared wardrobe and a small balcony." },
+            { q: "What part of your home do you like the most?",
+              insight: "最喜欢我的书桌，因为它是我学习和思考的地方。",
+              answer: "I like my desk area the most. It's where I study, read, and work on projects. It feels personal and productive." },
+            { q: "Do you live in an apartment or a house?",
+              insight: "学生宿舍，类似公寓。",
+              answer: "I live in a university dormitory, which is similar to an apartment but shared with roommates." },
+            { q: "Who do you live with?",
+              insight: "和三个机械工程系的同学一起住。",
+              answer: "I live with three other students, all majoring in mechanical engineering. We get along well and often study together." },
+            { q: "What do you usually do in your apartment?",
+              insight: "学习、看书、聊天、玩手机。",
+              answer: "I usually study or read in my dorm. Sometimes we chat or watch movies together. It's a relaxing space after a long day." }
+        ]},
+        { topic: "Your area/Neighbors", questions: [
+            { q: "Do you like the area that you live in?",
+              insight: "喜欢，独墅湖高教区环境好，安静适合学习。",
+              answer: "Yes, I really like the area where my university is located. It's called Dushu Lake Higher Education Town, very green and quiet, perfect for studying." },
+            { q: "Where do you like to go in that area?",
+              insight: "常去图书馆、体育馆和独墅湖湖边散步。",
+              answer: "I often go to the library or the sports center. Sometimes I take a walk by Dushu Lake, especially in the evening." },
+            { q: "Do you know any of your neighbors?",
+              insight: "邻居大多是学生，会认识同一层的同学。",
+              answer: "My neighbors are mostly students from different majors. I know a few on the same floor, and we occasionally chat or play games together." },
+            { q: "Are the people in your neighborhood nice and friendly?",
+              insight: "是的，学生之间很友善，互帮互助。",
+              answer: "Yes, everyone is friendly. Since we're all students, we understand each other and are happy to help with small things like borrowing books or sharing notes." },
+            { q: "Do you live in a noisy or a quiet area?",
+              insight: "安静，因为远离市中心，晚上很适合学习。",
+              answer: "It's quite quiet, especially at night. The area is away from the city center, so there's little traffic noise. It's ideal for studying." }
+        ]},
+        { topic: "The city you live in", questions: [
+            { q: "What city do you live in?",
+              insight: "苏州，一个古老又现代的城市。",
+              answer: "I live in Suzhou, a beautiful city known for its classical gardens and modern industrial parks." },
+            { q: "Do you like this city? Why?",
+              insight: "喜欢，因为既有传统文化，又有就业机会。",
+              answer: "Yes, I love Suzhou. It combines traditional charm with modern development. There are plenty of internship opportunities for engineering students, and the city is very livable." },
+            { q: "How long have you lived in this city?",
+              insight: "从2022年上大学开始，住了快3年。",
+              answer: "I've lived here since I started university in 2022, so about three years now." },
+            { q: "Are there big changes in this city?",
+              insight: "变化很快，比如新的地铁线路不断开通，园区也在扩展。",
+              answer: "Yes, Suzhou is changing rapidly. New subway lines are being built, and the industrial park keeps expanding. It's exciting to see the city grow." },
+            { q: "Is the city friendly to children and old people?",
+              insight: "很友好，有很多公园、医院和社区服务中心。",
+              answer: "I think so. There are many parks, good hospitals, and community centers. The public transport is also convenient for the elderly." },
+            { q: "Would you recommend your city to others?",
+              insight: "当然，尤其适合年轻人工作和生活。",
+              answer: "Definitely. Suzhou has a high quality of life, good job opportunities, and a rich cultural heritage. I'd recommend it to anyone, especially young professionals." }
+        ]}
+    ];
+
+    // 新题Part 1数据 (1-4月新题，独立问题)
+    const newPart1 = [
+        { topic: "Life stages", questions: [
+            { q: "What did you often do with your friends in your childhood?",
+              insight: "小时候常和朋友玩捉迷藏、打弹珠、去河边抓鱼。",
+              answer: "When I was a child, I often played hide-and-seek and marbles with my friends. Sometimes we would go to the nearby stream to catch small fish. It was simple but so much fun." },
+            { q: "What do you think is the most important at the moment?",
+              insight: "现在最重要的是学好专业知识，为出国读研做准备。",
+              answer: "Right now, the most important thing for me is to focus on my studies and prepare for graduate school applications. I need to maintain a good GPA and improve my English." },
+            { q: "Do you have any plans for the next five years?",
+              insight: "未来五年计划：出国读研，然后回国从事机器人研发。",
+              answer: "Yes, I plan to pursue a master's degree abroad, probably in robotics or automation. After that, I hope to return to China and work in the R&D field." },
+            { q: "How do people remember each stage of their lives?",
+              insight: "人们通过照片、日记和朋友聚会来回忆不同阶段。",
+              answer: "People often remember different life stages through photos, diaries, and reunions with old friends. For me, my childhood memories are tied to my hometown and old neighbors." },
+            { q: "Do you enjoy being the age you are now?",
+              insight: "喜欢，因为既有自由又能规划未来。",
+              answer: "Yes, I enjoy being in my early twenties. I have the freedom to explore my interests and make plans for the future, but still have the energy to pursue them." },
+            { q: "At what age do you think people are the happiest?",
+              insight: "可能童年最无忧无虑，但每个阶段都有幸福。",
+              answer: "I think childhood is probably the happiest because there are fewer responsibilities. But I believe every life stage has its own joys and opportunities for happiness." }
+        ]},
+        { topic: "Views", questions: [
+            { q: "Do you like taking pictures of different views?",
+              insight: "喜欢，尤其是日出日落和城市天际线。",
+              answer: "Yes, I enjoy taking photos of landscapes and cityscapes. I often take pictures of the sunset over Dushu Lake or the skyline of Suzhou Industrial Park." },
+            { q: "Do you prefer views in urban areas or rural areas?",
+              insight: "两者各有千秋，城市有现代感，乡村有宁静美。",
+              answer: "I like both. Urban views show human creativity and progress, while rural landscapes offer peace and natural beauty. It really depends on my mood." },
+            { q: "Do you prefer views in your country or in other countries?",
+              insight: "中国地大物博，有各种美景，但也想看看国外风光。",
+              answer: "China has such diverse landscapes, from mountains to rivers, so I never get tired of exploring my own country. But I'm also curious about famous views abroad, like the Alps or the Grand Canyon." }
+        ]},
+        { topic: "Scenery", questions: [
+            { q: "Do you look out the window at the scenery when travelling by bus or car?",
+              insight: "会，尤其是经过乡村或湖边的时候。",
+              answer: "Yes, I always look out the window when traveling. I enjoy watching the changing scenery, especially when passing through countryside or along lakes." },
+            { q: "Do you prefer the mountains or the sea?",
+              insight: "更喜欢海，因为开阔、让人放松。",
+              answer: "I prefer the sea. It feels vast and calming. I love the sound of waves and the smell of the sea air. Mountains are majestic, but they can feel a bit enclosed." },
+            { q: "Do you like to take scenery pictures?",
+              insight: "喜欢，用手机拍下沿途美景，留作纪念。",
+              answer: "Yes, I like to take scenery pictures. I use my phone to capture beautiful moments during trips. They become great memories to look back on." },
+            { q: "What are the most beautiful sights you have seen while travelling?",
+              insight: "去年去云南，看到了玉龙雪山和洱海，非常震撼。",
+              answer: "Last year I visited Yunnan province, and the view of Jade Dragon Snow Mountain reflected in Erhai Lake was absolutely breathtaking. It felt like a painting." }
+        ]},
+        { topic: "Building", questions: [
+            { q: "Are there tall buildings near your home?",
+              insight: "学校附近有很多新建的高层住宅和办公楼。",
+              answer: "Yes, near my university there are many tall residential buildings and office towers. It's a newly developed area, so the architecture is quite modern." },
+            { q: "Do you take photos of buildings?",
+              insight: "会，尤其是设计独特的建筑，比如苏州博物馆。",
+              answer: "Sometimes I do. I'm particularly interested in buildings with unique designs, like the Suzhou Museum, which blends traditional and modern styles beautifully." },
+            { q: "Is there a building that you would like to visit?",
+              insight: "想去参观上海中心大厦，体验一下中国最高楼的视角。",
+              answer: "I'd love to visit the Shanghai Tower. I've seen pictures of the view from the top, and it looks incredible. It would be amazing to see Shanghai from that height." },
+            { q: "Do you want to live in a tall building?",
+              insight: "想尝试一下高层公寓，视野好，但也要考虑安全问题。",
+              answer: "Yes, I'd like to try living in a tall building, at least for a while. The view must be fantastic. But I'd also consider safety and convenience." }
+        ]},
+        { topic: "Childhood activities", questions: [
+            { q: "What were your favourite activities when you were a child?",
+              insight: "喜欢踢足球、玩四驱车和看动画片。",
+              answer: "I loved playing football with friends, racing toy cars, and watching cartoons like 'Pleasant Goat and Big Big Wolf'." },
+            { q: "Did you prefer to do activities alone or with a group of people when you were a child?",
+              insight: "更喜欢和朋友们一起玩，人多热闹。",
+              answer: "I preferred group activities. Playing with friends was more fun and exciting. We would organize games and competitions together." }
+        ]},
+        { topic: "Typing", questions: [
+            { q: "Do you prefer typing or handwriting?",
+              insight: "打字更快，但手写有助于记忆。",
+              answer: "I prefer typing for speed and convenience, especially when taking notes in class. But for memorizing vocabulary or drafting ideas, handwriting feels more effective." },
+            { q: "Do you type on a desktop or laptop keyboard every day?",
+              insight: "用笔记本电脑键盘，因为便携。",
+              answer: "I use my laptop keyboard every day. It's portable and enough for my typing needs, whether for assignments or chatting with friends." },
+            { q: "When did you learn how to type on a keyboard?",
+              insight: "初中信息技术课开始学打字。",
+              answer: "I learned basic typing in middle school during computer class. But I really improved during high school when I had to type essays and reports." },
+            { q: "How do you improve your typing?",
+              insight: "多练习，偶尔用在线打字游戏。",
+              answer: "Practice is the key. I type a lot for my studies and sometimes use online typing games to make it more fun and improve my speed." }
+        ]},
+        { topic: "Hobby", questions: [
+            { q: "Do you have any hobbies?",
+              insight: "喜欢打篮球、看科幻电影和组装模型。",
+              answer: "Yes, I enjoy playing basketball, watching sci-fi movies, and assembling mechanical models, which relates to my major." },
+            { q: "Did you have any hobbies when you were a child?",
+              insight: "小时候喜欢收集卡片和玩四驱车。",
+              answer: "When I was young, I loved collecting trading cards and racing mini four-wheel-drive cars with friends." },
+            { q: "Do you have a hobby that you've had since childhood?",
+              insight: "打篮球是从小学开始一直坚持的爱好。",
+              answer: "Basketball is a hobby I've kept since primary school. I still play with classmates every week." },
+            { q: "Do you have the same hobbies as your family members?",
+              insight: "和爸爸都喜欢看体育比赛，但妈妈更喜欢看电视。",
+              answer: "My dad and I both enjoy watching sports games, especially basketball. My mom, on the other hand, prefers watching dramas and cooking." }
+        ]},
+        { topic: "Morning time", questions: [
+            { q: "Do you like getting up early in the morning?",
+              insight: "不特别喜欢，但有课时必须早起。",
+              answer: "I'm not a natural early riser, but I have to get up early on weekdays for classes. On weekends, I like to sleep in a bit." },
+            { q: "What do you usually do in the morning?",
+              insight: "洗漱、吃早餐，然后去上课或去图书馆。",
+              answer: "I usually wake up, brush my teeth, and have a quick breakfast. Then I head to class or the library to study." },
+            { q: "What did you do in the morning when you were little? Why?",
+              insight: "小时候早上经常看动画片，因为上学前有空闲。",
+              answer: "When I was little, I often watched cartoons in the morning before school. It was a fun way to start the day." },
+            { q: "Are there any differences between what you do in the morning now and what you did in the past?",
+              insight: "现在早上更忙碌，要学习；小时候更轻松。",
+              answer: "Yes, now my mornings are busier with studies and responsibilities. When I was a child, mornings were more relaxed and fun." },
+            { q: "Do you spend your mornings doing the same things on both weekends and weekdays? Why?",
+              insight: "周末早上会慢下来，睡懒觉、吃brunch。",
+              answer: "On weekends, I have a different routine. I wake up later, have a relaxed brunch, and might go out with friends. It's my time to recharge." }
+        ]},
+        { topic: "Reading", questions: [
+            { q: "Do you like reading?",
+              insight: "喜欢，尤其是科幻小说和专业书籍。",
+              answer: "Yes, I enjoy reading. I like sci-fi novels for fun and engineering books for study." },
+            { q: "Do you prefer to read on paper or on a screen?",
+              insight: "看情况，专业书喜欢纸质，小说喜欢电子版。",
+              answer: "It depends. For textbooks and serious reading, I prefer paper because it's easier to take notes. For novels, I use my phone or tablet." },
+            { q: "When do you need to read carefully, and when not?",
+              insight: "学习时仔细读，休闲时可以快速浏览。",
+              answer: "When studying for exams or writing papers, I read carefully. When reading for pleasure, I just skim through." },
+            { q: "Do you prefer scanning or detailed reading?",
+              insight: "取决于目的，研究资料需要细读，新闻可以扫读。",
+              answer: "For research, I prefer detailed reading. For news or social media, scanning is enough." }
+        ]},
+        { topic: "Walking", questions: [
+            { q: "Do you walk a lot?",
+              insight: "在学校里经常走路去教室、食堂。",
+              answer: "Yes, I walk a lot on campus, between classes, to the canteen, and back to the dorm." },
+            { q: "Did you often go outside to have a walk when you were a child?",
+              insight: "小时候常在小区里和伙伴们散步玩耍。",
+              answer: "Yes, I often went outside to play and walk around the neighborhood with friends." },
+            { q: "Why do people like to walk in parks?",
+              insight: "公园空气好，环境优美，能放松心情。",
+              answer: "Parks offer fresh air, greenery, and a peaceful environment, which helps people relax and escape the busy city life." },
+            { q: "Where would you like to take a long walk if you had the chance?",
+              insight: "想去太湖边或金鸡湖边散步。",
+              answer: "I'd love to take a long walk by Taihu Lake or Jinji Lake. The scenery there is beautiful, especially at sunset." },
+            { q: "Where did you go for a walk lately?",
+              insight: "上周和同学去了独墅湖湖边散步。",
+              answer: "Last week, I went for a walk with classmates by Dushu Lake. It was a nice break from studying." }
+        ]},
+        { topic: "Dreams", questions: [
+            { q: "Can you remember the dreams you had?",
+              insight: "有时能记住，尤其是紧张或有趣的梦。",
+              answer: "Sometimes I can remember my dreams, especially if they were exciting or scary. Most of the time, they fade away quickly after I wake up." },
+            { q: "Do you share your dreams with others?",
+              insight: "偶尔会和室友分享有趣的梦。",
+              answer: "Occasionally, I share funny or weird dreams with my roommates. It can be entertaining." },
+            { q: "Do you think dreams have special meanings?",
+              insight: "可能反映了潜意识，但不一定都有深意。",
+              answer: "I think dreams can reflect our subconscious thoughts and feelings, but they don't always have deep meanings. Sometimes they're just random." },
+            { q: "Do you want to make your dreams come true?",
+              insight: "当然，尤其是我的职业梦想。",
+              answer: "Definitely, especially my career dreams. I want to become a skilled engineer and contribute to innovative projects." }
+        ]},
+        { topic: "Keys", questions: [
+            { q: "Do you always bring a lot of keys with you?",
+              insight: "现在只带宿舍钥匙和自行车钥匙。",
+              answer: "Not many. I just carry my dorm key and a small key for my bike lock." },
+            { q: "Have you ever lost your keys?",
+              insight: "丢过一次宿舍钥匙，后来找室友借了备用。",
+              answer: "Yes, once I lost my dorm key. I had to borrow the spare key from my roommate and later got a new one." },
+            { q: "Do you often forget the keys and lock yourself out?",
+              insight: "很少，但偶尔会忘在宿舍里。",
+              answer: "Rarely, but sometimes I forget to take my keys when I go out and have to wait for my roommate to come back." },
+            { q: "Do you think it's a good idea to leave your keys with a neighbour?",
+              insight: "可以，如果和邻居关系好，以备不时之需。",
+              answer: "Yes, it's a good idea if you trust your neighbor. They can help you out in emergencies." }
+        ]},
+        { topic: "Sports team", questions: [
+            { q: "Have you ever been part of a sports team?",
+              insight: "参加过学院的篮球队。",
+              answer: "Yes, I was part of my college's basketball team for a year. We practiced twice a week and played against other departments." },
+            { q: "Are team sports popular in your culture?",
+              insight: "是的，篮球和足球在大学里非常流行。",
+              answer: "Yes, team sports like basketball and football are very popular in China, especially among young people." },
+            { q: "Do you like watching team games? Why?",
+              insight: "喜欢，因为团队配合很有看头。",
+              answer: "I enjoy watching team games, especially basketball. The teamwork and strategies are fascinating to watch." },
+            { q: "What are the differences between team sports and individual sports?",
+              insight: "团队运动强调合作，个人运动更考验个人意志。",
+              answer: "Team sports require communication and cooperation with others, while individual sports focus more on personal discipline and self-improvement." }
+        ]},
+        { topic: "Pets and animals", questions: [
+            { q: "What's your favourite animals? Why?",
+              insight: "喜欢狗，因为忠诚又可爱。",
+              answer: "My favourite animals are dogs. They are loyal, friendly, and seem to understand human emotions." },
+            { q: "Where do you prefer to keep your pet, indoors or outdoors?",
+              insight: "如果养狗，希望室内，可以多陪伴。",
+              answer: "If I had a pet, I'd prefer to keep it indoors, especially a dog, so we can spend more time together." },
+            { q: "Have you ever had a pet before?",
+              insight: "小时候养过一只兔子。",
+              answer: "Yes, when I was a child, I had a pet rabbit. It was cute but required a lot of care." },
+            { q: "What is the most popular animal in China?",
+              insight: "狗和猫是最常见的宠物，大熊猫是国宝。",
+              answer: "Dogs and cats are the most popular pets in China. And of course, the giant panda is our national treasure." }
+        ]},
+        { topic: "Food", questions: [
+            { q: "What is your favourite food?",
+              insight: "喜欢无锡酱排骨和小笼包。",
+              answer: "My favourite food is Wuxi spare ribs, which are sweet and tender. I also love Xiaolongbao, the soup dumplings." },
+            { q: "What kind of food did you like when you were young?",
+              insight: "小时候爱吃炸鸡和薯条，现在也喜欢。",
+              answer: "When I was young, I loved fried chicken and French fries. I still enjoy them occasionally." },
+            { q: "Do you eat different foods at different times of the year?",
+              insight: "会，夏天爱吃凉皮，冬天爱吃火锅。",
+              answer: "Yes, in summer I prefer cold noodles and watermelon, while in winter I enjoy hot pot and warm soups." },
+            { q: "Has your favourite food changed since you were a child?",
+              insight: "小时候爱吃甜食，现在更喜欢咸口和辣味。",
+              answer: "Yes, as a child I had a sweet tooth, but now I prefer savory and spicy foods, especially Sichuan cuisine." }
+        ]},
+        { topic: "Day off", questions: [
+            { q: "When was the last time you had a few days off?",
+              insight: "寒假时休息了将近一个月。",
+              answer: "The last time was during the winter break, about a month ago. I had almost a month off from classes." },
+            { q: "What do you usually do when you have days off?",
+              insight: "喜欢旅行、看电影或和朋友聚会。",
+              answer: "I like to travel to nearby cities, watch movies, or hang out with friends when I have days off." },
+            { q: "Do you usually spend your days off with your parents or with your friends?",
+              insight: "在学校时和朋友过，回家时陪父母。",
+              answer: "When I'm at university, I spend days off with friends. When I go back to Wuxi, I spend time with my parents." },
+            { q: "What would you like to do if you had a day off tomorrow?",
+              insight: "想去上海看展览或逛逛外滩。",
+              answer: "If I had a day off tomorrow, I'd like to go to Shanghai to visit a museum or just walk along the Bund." }
+        ]}
+    ];
+
+    // 保留老题Part 1数据 (保留老题，独立问题)
+    const retainedPart1 = [
+        { topic: "Electronic devices", questions: [
+            { q: "What kind of apps have you downloaded on your phone?",
+              insight: "社交类（微信、QQ）、购物（淘宝）、学习（知乎、词典）。",
+              answer: "I have many apps on my phone, like WeChat for messaging, Taobao for shopping, and some learning apps like Zhihu and a dictionary." },
+            { q: "What technology do you often use, computers or cellphones?",
+              insight: "两者都用，学习用电脑，娱乐用手机。",
+              answer: "I use both. My laptop is for studying and assignments, while my phone is for entertainment and staying connected." },
+            { q: "What electronic devices have you bought lately?",
+              insight: "最近买了一个无线耳机，方便跑步时用。",
+              answer: "I recently bought a pair of wireless earbuds. They're very convenient when I'm running or studying in the library." },
+            { q: "Is there any technology you want to buy?",
+              insight: "想买一台平板电脑，方便看电子书和记笔记。",
+              answer: "I'd like to buy a tablet for reading e-books and taking notes in class. It might be lighter than carrying textbooks." },
+            { q: "Is technology important in your life?",
+              insight: "非常重要，学习、沟通、娱乐都离不开。",
+              answer: "Yes, technology plays a huge role in my life. I use it for studying, keeping in touch with friends, and relaxing." },
+            { q: "Is there any technology you don't like?",
+              insight: "不太喜欢太复杂的软件，有时让人头疼。",
+              answer: "I'm not a fan of overly complicated software that is not user-friendly. Sometimes it wastes time just figuring out how to use it." },
+            { q: "What do you think are the trends in technology today compared to when you were young?",
+              insight: "现在AI和智能设备很火，以前更多是互联网普及。",
+              answer: "Nowadays, AI and smart devices are everywhere. When I was young, the trend was the rapid spread of the internet and smartphones." }
+        ]},
+        { topic: "Mobile phone", questions: [
+            { q: "Have you ever lost your mobile phone?",
+              insight: "丢过一次，找回来了。",
+              answer: "Yes, I lost my phone once in a taxi. Luckily, I contacted the driver and got it back." },
+            { q: "What was your first mobile phone?",
+              insight: "第一部是诺基亚功能机，只能打电话发短信。",
+              answer: "My first phone was a Nokia feature phone. It could only make calls and send texts, but it was very durable." },
+            { q: "Do you often use your mobile phone for texting or calls?",
+              insight: "现在更多用微信语音和视频，电话用得少了。",
+              answer: "I use WeChat for voice and video calls most of the time. Traditional calls are rare now." },
+            { q: "Will you buy a new one in the future?",
+              insight: "会，等这部手机卡顿的时候。",
+              answer: "Yes, I'll probably buy a new one when this phone becomes too slow or breaks." },
+            { q: "How has your mobile phone changed your life?",
+              insight: "让生活更方便，但也容易分心。",
+              answer: "It has made many things easier, like finding information and staying connected. But sometimes it's also a distraction from studying." }
+        ]},
+        { topic: "Happy things", questions: [
+            { q: "Is there anything that has made you feel happy lately?",
+              insight: "上周收到了课程设计的好成绩，很开心。",
+              answer: "Yes, last week I got a good grade on my course project. It made me very happy because I put a lot of effort into it." },
+            { q: "What made you happy when you were little?",
+              insight: "小时候最开心的是得到新玩具和去游乐园。",
+              answer: "When I was little, getting new toys or going to the amusement park made me extremely happy." },
+            { q: "What do you think will make you feel happy in the future?",
+              insight: "拿到理想大学的录取通知书会让我很开心。",
+              answer: "Getting an admission letter from my dream university for graduate studies will definitely make me very happy." },
+            { q: "When do you feel happy at work? Why?",
+              insight: "实习时解决了技术问题，很有成就感。",
+              answer: "During my internship, I felt happy when I solved a technical problem successfully. It gave me a sense of achievement." },
+            { q: "Do you feel happy when buying new things?",
+              insight: "会有短暂的快乐，但真正的快乐来自成就。",
+              answer: "Buying new things gives me temporary happiness, but long-term satisfaction comes from achievements and relationships." },
+            { q: "Do you think people are happy when buying new things?",
+              insight: "可能，但往往是短暂的。",
+              answer: "Maybe, but the happiness from shopping often fades quickly. True happiness is more about experiences and connections." }
+        ]},
+        { topic: "Plants", questions: [
+            { q: "Do you keep plants at home?",
+              insight: "宿舍养了一盆多肉，容易照顾。",
+              answer: "I have a small succulent in my dorm. It's easy to care for and adds a bit of life to the room." },
+            { q: "What plant did you grow when you were young?",
+              insight: "小学时种过绿豆，观察它发芽。",
+              answer: "In primary school, I grew mung beans in a cup to watch them sprout. It was a fun science project." },
+            { q: "Do you know anything about growing a plant?",
+              insight: "知道要适量浇水、晒太阳。",
+              answer: "I know the basics: water them regularly, make sure they get enough sunlight, and use the right soil." },
+            { q: "Do Chinese people send plants as gifts?",
+              insight: "会，比如春节送兰花或发财树。",
+              answer: "Yes, sometimes. During Spring Festival, people give lucky plants like orchids or money trees as gifts." }
+        ]},
+        { topic: "Art", questions: [
+            { q: "Do you like art?",
+              insight: "喜欢，尤其是中国画和书法。",
+              answer: "Yes, I appreciate art, especially traditional Chinese painting and calligraphy. They are very elegant." },
+            { q: "Do you like visiting art galleries?",
+              insight: "偶尔去，苏州博物馆就有很多好展览。",
+              answer: "I visit art galleries occasionally. The Suzhou Museum has great exhibitions combining traditional and modern art." },
+            { q: "Do you want to be an artist?",
+              insight: "不想，艺术只是爱好。",
+              answer: "No, I don't want to be an artist. Art is just a hobby for me. My passion is engineering." },
+            { q: "Do you like modern art or traditional art?",
+              insight: "更喜欢传统艺术，感觉更有底蕴。",
+              answer: "I prefer traditional art. It feels more rooted in culture and history. Some modern art is too abstract for me." }
+        ]},
+        { topic: "Carrying things", questions: [
+            { q: "What do you often carry with you?",
+              insight: "手机、钱包、钥匙和书包。",
+              answer: "I always carry my phone, wallet, keys, and my backpack with my laptop and books." },
+            { q: "What do you do if your item is heavy?",
+              insight: "如果太重，会休息一下或找人帮忙。",
+              answer: "If it's too heavy, I'll take a break or ask a friend for help. Sometimes I use a trolley if available." }
+        ]},
+        { topic: "Quiet/noisy places", questions: [
+            { q: "Do you like quiet or noisy places?",
+              insight: "学习时喜欢安静，放松时可以去热闹的地方。",
+              answer: "I prefer quiet places when I'm studying. But when relaxing with friends, a bit of noise is fine." },
+            { q: "Would you like to go to quiet or noisy places on weekends when you are free?",
+              insight: "周末想去热闹的地方逛街吃饭，然后回宿舍安静休息。",
+              answer: "On weekends, I enjoy going to lively places for shopping or eating, but I also appreciate quiet time afterward." }
+        ]},
+        { topic: "Public places", questions: [
+            { q: "Have you ever talked with someone you don't know in public places?",
+              insight: "会，比如问路或在图书馆讨论问题。",
+              answer: "Yes, sometimes I ask for directions or chat with someone while waiting in line. It's a good way to meet people." },
+            { q: "Do you wear headphones in public places?",
+              insight: "在地铁或图书馆会戴，避免打扰别人。",
+              answer: "Yes, I wear headphones on the subway or in the library to avoid disturbing others and to enjoy my own music." },
+            { q: "Would you like to see more public places near where you live?",
+              insight: "希望有更多公园和运动场。",
+              answer: "I'd love to see more parks and sports facilities near campus. It would be great for exercise and relaxation." },
+            { q: "Do you often go to public places with your friends?",
+              insight: "经常，比如一起去商场、公园或电影院。",
+              answer: "Yes, I often go to public places with friends, like shopping malls, parks, or the cinema." }
+        ]}
+    ];
+
+    // 通用渲染函数：只渲染Part 1
+    function renderPart1Panel(panelId, data) {
+        const panel = document.getElementById(panelId);
+        panel.innerHTML = '';
+
+        // 话题导航
+        const topicNav = document.createElement('div');
+        topicNav.className = 'topic-nav';
+        data.forEach((topic, idx) => {
+            const btn = document.createElement('button');
+            btn.className = `topic-btn ${idx === 0 ? 'active' : ''}`;
+            btn.dataset.topicIdx = idx;
+            btn.innerText = topic.topic;
+            topicNav.appendChild(btn);
+        });
+        panel.appendChild(topicNav);
+
+        // 话题面板容器
+        const topicsContainer = document.createElement('div');
+        topicsContainer.className = 'topics-container';
+        panel.appendChild(topicsContainer);
+
+        // 每个话题的面板
+        data.forEach((topic, idx) => {
+            const topicDiv = document.createElement('div');
+            topicDiv.className = `topic-panel ${idx === 0 ? 'active-panel' : ''}`;
+            topicDiv.id = `panel-${panelId}-${idx}`;
+            topicsContainer.appendChild(topicDiv);
+
+            // 该话题下的所有问题卡片
+            topic.questions.forEach((item, qIdx) => {
+                const card = document.createElement('div');
+                card.className = 'question-card';
+                card.innerHTML = `
+                    <div class="en-prompt">${item.q}</div>
+                    <div class="note-area"><div class="note-label"><span>📝 笔记框</span></div><textarea class="resize-note" placeholder="记录你的关键词或想法..."></textarea></div>
+                    <div class="insight-collapse">
+                        <div class="insight-header" data-target="insight-${panelId}-${idx}-${qIdx}"><span>🧠 思路剖析 (点击展开)</span><span class="arrow">▼</span></div>
+                        <div class="insight-content" id="insight-${panelId}-${idx}-${qIdx}"><div class="insight-deco">${item.insight}</div></div>
+                    </div>
+                    <div class="sentence-toggle-area">
+                        <button class="btn-sentence" data-target="answer-${panelId}-${idx}-${qIdx}">📌 参考回答 点击查看</button>
+                        <div class="hidden-practice" id="answer-${panelId}-${idx}-${qIdx}">
+                            <div class="practice-item">
+                                <div class="chinese-hint">💬 参考回答（汉英对照）</div>
+                                <div style="background:#fff; border-radius:20px; padding:15px;">
+                                    <div class="example-en">${item.answer}</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                `;
+                topicDiv.appendChild(card);
+            });
+        });
+
+        // topic切换逻辑
+        topicNav.querySelectorAll('.topic-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                topicNav.querySelectorAll('.topic-btn').forEach(b => b.classList.remove('active'));
+                this.classList.add('active');
+                const idx = this.dataset.topicIdx;
+                topicsContainer.querySelectorAll('.topic-panel').forEach(p => p.classList.remove('active-panel'));
+                document.getElementById(`panel-${panelId}-${idx}`).classList.add('active-panel');
+            });
+        });
+    }
+
+    // 初始化三个面板
+    renderPart1Panel('evergreenPanel', evergreenPart1);
+    renderPart1Panel('newPanel', newPart1);
+    renderPart1Panel('retainedPanel', retainedPart1);
+
+    // 主面板切换
+    document.getElementById('modeEvergreen').addEventListener('click', function() {
+        document.querySelectorAll('.mode-btn').forEach(b => b.classList.remove('active'));
+        this.classList.add('active');
+        document.querySelectorAll('.main-panel').forEach(p => p.classList.remove('active-panel'));
+        document.getElementById('evergreenPanel').classList.add('active-panel');
+    });
+    document.getElementById('modeNew').addEventListener('click', function() {
+        document.querySelectorAll('.mode-btn').forEach(b => b.classList.remove('active'));
+        this.classList.add('active');
+        document.querySelectorAll('.main-panel').forEach(p => p.classList.remove('active-panel'));
+        document.getElementById('newPanel').classList.add('active-panel');
+    });
+    document.getElementById('modeRetained').addEventListener('click', function() {
+        document.querySelectorAll('.mode-btn').forEach(b => b.classList.remove('active'));
+        this.classList.add('active');
+        document.querySelectorAll('.main-panel').forEach(p => p.classList.remove('active-panel'));
+        document.getElementById('retainedPanel').classList.add('active-panel');
+    });
+
+    // 折叠、参考回答展开
+    document.addEventListener('click', function(e) {
+        if (e.target.closest('.insight-header')) {
+            const header = e.target.closest('.insight-header');
+            const targetId = header.dataset.target;
+            const content = document.getElementById(targetId);
+            const arrow = header.querySelector('.arrow');
+            if (content) {
+                content.classList.toggle('expanded');
+                if (arrow) arrow.style.transform = content.classList.contains('expanded') ? 'rotate(180deg)' : 'rotate(0deg)';
+            }
+            e.preventDefault();
+        }
+        if (e.target.classList.contains('btn-sentence')) {
+            const targetId = e.target.dataset.target;
+            const practiceDiv = document.getElementById(targetId);
+            if (practiceDiv) {
+                practiceDiv.classList.toggle('show');
+                e.target.innerText = practiceDiv.classList.contains('show') ? '📌 参考回答 隐藏' : '📌 参考回答 点击查看';
+            }
+        }
+    });
+
+    document.getElementById('exportBtn').addEventListener('click', function() {
+        alert('导出功能：可复制当前话题内容。');
+    });
+
+    // 默认展开第一个思路
+    setTimeout(() => {
+        const firstInsight = document.querySelector('.insight-content');
+        if (firstInsight) {
+            firstInsight.classList.add('expanded');
+            const arrow = document.querySelector('.insight-header .arrow');
+            if (arrow) arrow.style.transform = 'rotate(180deg)';
+        }
+    }, 500);
+</script>
+</body>
+</html>
